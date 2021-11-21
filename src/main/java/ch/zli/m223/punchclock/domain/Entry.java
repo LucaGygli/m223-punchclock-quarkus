@@ -1,4 +1,4 @@
-/*package ch.zli.m223.punchclock.domain;
+package ch.zli.m223.punchclock.domain;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -11,21 +11,17 @@ public class Entry {
     private Long id;
 
     @Column(nullable = false)
-    private Boolean checkIn;
+    private LocalDateTime checkIn;
 
     @Column(nullable = false)
     private LocalDateTime checkOut;
-/*
+
     @ManyToOne
-    @JoinColumn(name = "category_id",nullable = false)
-    private Category category;
+    @JoinColumn(name = "user_Id",nullable = false)
+    private User user;
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public LocalDateTime getCheckIn() {
@@ -43,8 +39,4 @@ public class Entry {
     public void setCheckOut(LocalDateTime checkOut) {
         this.checkOut = checkOut;
     }
-
-    public void setCategory(Category c){ this.category = c; }
-
-    public Category getCategory() { return this.category; }
-}*/
+}

@@ -1,3 +1,4 @@
+/*
 package ch.zli.m223.punchclock.domain;
 
 import javax.persistence.*;
@@ -63,3 +64,4 @@ public class Time {
         this.user = user;
     }
 }
+*/

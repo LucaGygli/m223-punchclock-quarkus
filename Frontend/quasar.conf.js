@@ -3,9 +3,9 @@ const chalk = require('chalk')
 let env = require('./config/dev.env')
 
 switch (process.env.PROFILE) {
-  case 'sse':
-    console.log(chalk.cyan('\n Using sse env.\n'))
-    env = require('./config/sse.env')
+  case 'gyg':
+    console.log(chalk.cyan('\n Using gyg env.\n'))
+    env = require('./config/gyg.env')
     break
   default:
     console.log(chalk.cyan('\n Using prod env.\n'))

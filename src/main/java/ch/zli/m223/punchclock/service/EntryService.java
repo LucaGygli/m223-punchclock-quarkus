@@ -1,4 +1,4 @@
-/*package ch.zli.m223.punchclock.service;
+package ch.zli.m223.punchclock.service;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public class EntryService {
     @Inject
     private EntityManager entityManager;
 
-    @Transactional 
+    @Transactional
     public Entry createEntry(Entry entry) {
         entityManager.persist(entry);
         return entry;
@@ -37,9 +37,8 @@ public class EntryService {
     }
 
     @Transactional
-        public Entry updateEntity(Entry entry){
+    public Entry updateEntity(Entry entry){
         entityManager.merge(entry);
         return entry;
     }
 }
-*/

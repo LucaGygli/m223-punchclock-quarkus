@@ -10,41 +10,25 @@ public class User {
     private Long id;
 
     @Column(nullable = false)
+    private String username;
+
+    @Column(nullable = false)
+    private String firstName;
+
+    @Column(nullable = false)
+    private String lastName;
+
+    @Column(nullable = false)
     private String email;
 
-    @Column(nullable = false)
-    private String vorname;
-
-    @Column(nullable = false)
-    private String nachname;
-
-    @Column(nullable = false)
-    private Boolean is_Admin;
-
     @Column(nullable = true)
-    private String passwort;
+    private String password;
 
     @OneToMany(mappedBy="user")
-    private List<Time> times;
-
-    @ManyToMany
-    @JoinTable(name = "User_Project",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "project_id"))
-    private List<Project> projects;
-
-    @ManyToMany
-    @JoinTable(name = "User_Group",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "group_id"))
-    private List<Group> groups;
+    private List<Entry> entries;
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getEmail() {
@@ -55,68 +39,36 @@ public class User {
         this.email = email;
     }
 
-    public String getVorname() {
-        return vorname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setVorname(String vorname) {
-        this.vorname = vorname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getNachname() {
-        return nachname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setNachname(String nachname) {
-        this.nachname = nachname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public Boolean getIs_Admin() {
-        return is_Admin;
+    public String getPassword() {
+        return password;
     }
 
-    public void setIs_Admin(Boolean is_Admin) {
-        this.is_Admin = is_Admin;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getPasswort() {
-        return passwort;
+    public List<Entry> getEntries() {
+        return entries;
     }
 
-    public void setPasswort(String passwort) {
-        this.passwort = passwort;
+    public void setEntries(List<Entry> entries) {
+        this.entries = entries;
     }
-
-    public List<Time> getTimes() {
-        return times;
-    }
-
-    public void setTimes(List<Time> times) {
-        this.times = times;
-    }
-
-    public List<Project> getProjects() {
-        return projects;
-    }
-
-    public void setProjects(List<Project> projects) {
-        this.projects = projects;
-    }
-
-    public List<Group> getGroups() {
-        return groups;
-    }
-
-    public void setGroups(List<Group> groups) {
-        this.groups = groups;
-    }
-
-
-
-
-
-
-
-
 
 }
