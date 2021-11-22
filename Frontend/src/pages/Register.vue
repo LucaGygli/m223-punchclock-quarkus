@@ -5,23 +5,23 @@
         <div style="max-width: 300px;" class="q-mx-auto">
             <form @submit="validateAndSubmit">
                 <form-group name="username">
-                    <q-input v-model="username" label="Username" slot-scope="{attrs}" v-bind="attrs" /><br />
+                    <q-input v-model="username" label="Username" v-bind="attrs" /><br />
                 </form-group>
 
                 <form-group name="firstName">
-                    <q-input v-model="firstName" label="Vorname" slot-scope="{attrs}" v-bind="attrs" /><br />
+                    <q-input v-model="firstName" label="Vorname" v-bind="attrs" /><br />
                 </form-group>
 
                 <form-group name="lastName">
-                    <q-input v-model="lastName" label="Name" slot-scope="{attrs}" v-bind="attrs" /><br />
+                    <q-input v-model="lastName" label="Name" v-bind="attrs" /><br />
                 </form-group>
 
                 <form-group name="eMail">
-                    <q-input v-model="email" label="E-Mail" slot-scope="{attrs}" v-bind="attrs" /><br />
+                    <q-input v-model="email" label="E-Mail" v-bind="attrs" /><br />
                 </form-group>
 
                 <form-group name="password">
-                    <q-input v-model="password" type="password" label="Passwort" slot-scope="{attrs}" v-bind="attrs" />
+                    <q-input v-model="password" type="password" label="Passwort" v-bind="attrs" />
                 </form-group>
             </form>
         </div>
