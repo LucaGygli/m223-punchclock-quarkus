@@ -4,7 +4,6 @@
     <div>
         <q-table title="" :rows="rows" :columns="columns" row-key="name" />
     </div>
-   <!-- <q-input filled v-model="checkin" label="Filled" />-->
 </q-page>
 </template>
 
@@ -16,16 +15,6 @@ const columns = [
             todo: 'todo',
             label: 'Name',
             field: 'name',
-            // required: true,
-            // align: 'left',
-            // sortable: true,
-            // sort: (a, b, rowA, rowB) => parseInt(a, 10) - parseInt(b, 10),
-            // sortOrder: 'ad',
-            // format: (val, row) => `${val}%`,
-            // style: 'width: 500px',
-            // classes: 'my-special-class',
-            // headerStyle: 'width: 500px',
-            // headerClasses: 'my-special-class'
         },
         { name: 'todo', label: 'ToDo', field: 'todo'},
         { name: 'task', label: 'Task', field: 'task'},
@@ -39,8 +28,8 @@ const rows = [
             username: 'Luca',
             todo: 'ToDo',
             task: 'Task',
-            checkIn: '12.05.2021',
-            checkOut: '13.05.2021',
+            checkIn: '17.03.2021',
+            checkOut: '19.03.2021',
             edit: 'edit',
             delete: 'delete'
         }
