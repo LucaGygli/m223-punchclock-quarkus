@@ -1,7 +1,7 @@
 <template>
 <q-page>
     <div class="LoginPage">
-        <h1>Login</h1>
+        <h2>Login</h2>
         <div style="max-width: 300px;" class="q-mx-auto">
             <form-wrapper :validator="$v">
                 <form-group name="username">
@@ -13,7 +13,9 @@
                 </form-group>
             </form-wrapper>
         </div>
-        <q-btn flat  label="Submit" @click="submitLogin" />
+        <q-btn class="LoginButton" color="black" label="Registrieren"  unelevated to="/Register" style="margin-right: 10px;"/>
+        <q-btn class="LoginButton" color="black" label="Login" @click="submitLogin"/>
+       
     </div>
 
 </q-page>
@@ -87,5 +89,8 @@ export default {
     top: 24%;
     right: 0%;
     width: 100%;
+}
+.LoginButton{
+    margin-top: 20px;
 }
 </style>

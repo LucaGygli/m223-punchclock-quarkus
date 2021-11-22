@@ -10,9 +10,16 @@ const routes = [
   },
   {
     path: '/',
-    component: () => import('layouts/Empty.vue'),
+    component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: 'Login', name: "Login", component: () => import('pages/Login.vue') }
+    ]
+  },
+  {
+    path: '/',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: 'Register', name: "Register", component: () => import('pages/Register.vue') }
     ]
   },
 
