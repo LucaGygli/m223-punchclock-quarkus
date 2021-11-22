@@ -33,49 +33,24 @@ export default {
             password: "",
         }
     },
-    /*
-    TODO: Fixen der Valdiation
-    validations: {
-        password: {
-            required
-        },
-        username: {
-            required
-        }
-    },*/
     methods: {
         async submitLogin() {
-            this.$v.$touch()
-            if (this.$v.$invalid) {
-                return
-            }
-            console.log("asd")
-            let res = await axios.post('/User/Login', {
-                Username: this.username,
-                Password: this.password
+            this.$store.dispatch("auth/logout");
+            let res = await axios.post('/auth/Login', {
+                username: this.username,
+                password: this.password
             })
             if (res.status === 200) {
-                const token = res.data.token
+                const token = res.data
                 if (token == undefined) {
-                    Notify.create({
-                        position: 'top',
-                        type: 'negative',
-                        message: 'login failed'
-                    })
                     this.password = ''
-                    this.$v.$reset()
                     return;
                 }
-                $store.dispatch("auth/logout");
-                $store.dispatch("auth/login", {
+                this.$store.dispatch("auth/logout");
+                this.$store.dispatch("auth/login", {
                     jwt: token
                 });
-                Notify.create({
-                    position: 'top',
-                    type: 'positive',
-                    message: 'login sucssesd'
-                })
-                this.$router.push('/')
+                this.$router.push('/home')
             }
         }
     }

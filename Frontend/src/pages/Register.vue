@@ -47,17 +47,22 @@ export default {
             password: "",
         }
     },
+    computed:{
+        id(){
+            return this.$$route.params.id
+        }
+    },
 
     methods: {
         async validateAndSubmit(){
             let res = await axios.post("/user", {
                 username: this.username,
-                firstname: this.firstname,
-                lastname: this.lastname,
+                firstName: this.firstName,
+                lastName: this.lastName,
                 email: this.email,
                 password: this.password,
             })
-            this.$router.push('/user')  
+            this.$router.push('/')  
         }
     }
 }

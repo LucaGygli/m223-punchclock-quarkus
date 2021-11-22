@@ -1,7 +1,7 @@
 <template>
 <q-page class="flex flex-center">
 <h2>Übersicht</h2>
-    <div>
+    <div class="dashboard">
         <q-table title="" :rows="rows" :columns="columns" row-key="name" />
     </div>
 </q-page>
