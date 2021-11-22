@@ -20,6 +20,10 @@ public class Entry {
     @JoinColumn(name = "user_Id",nullable = false)
     private User user;
 
+    @OneToOne
+    @JoinColumn(name = "todo_Id",nullable = true)
+    private ToDo toDo;
+
     public Long getId() {
         return id;
     }

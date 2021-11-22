@@ -11,6 +11,10 @@ public class ToDo {
     @Column(nullable = false)
     private String toDoName;
 
+    @OneToOne
+    @JoinColumn(name = "task_Id",nullable = true)
+    private Task task;
+
     public Long getId() {
         return id;
     }

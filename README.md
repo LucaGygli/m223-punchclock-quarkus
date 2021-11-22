@@ -20,7 +20,8 @@ Benutzername: zli
 Passwort: zli
 
 #DatenImport
-
+Im DatenImport wird ein user erstellt mit welchem man sich anmelden kann.
+Die Login Daten sind: Username: lucag Passwort: 1234
 
 #Abweichungen von Planung
 Die Funktionen der Klassen weichen teilweise von der Planung ab, da nicht alle notwendig oder nützlich waren.
