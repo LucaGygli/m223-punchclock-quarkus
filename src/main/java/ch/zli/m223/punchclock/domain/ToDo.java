@@ -14,7 +14,7 @@ public class ToDo {
     public Long getId() {
         return id;
     }
-    public String getToDoNameName() {
+    public String getToDoName() {
         return toDoName;
     }
     public void setToDoName(String toDoName) {

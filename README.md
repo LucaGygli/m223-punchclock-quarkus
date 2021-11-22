@@ -19,3 +19,9 @@ Datenquelle: jdbc:h2:mem:punchclock
 Benutzername: zli
 Passwort: zli
 
+#DatenImport
+
+
+#Abweichungen von Planung
+Die Funktionen der Klassen weichen teilweise von der Planung ab, da nicht alle notwendig oder nützlich waren.
+

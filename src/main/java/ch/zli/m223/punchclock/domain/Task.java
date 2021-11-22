@@ -14,7 +14,7 @@ public class Task {
     public Long getId() {
         return id;
     }
-    public String getTaskNameNameName() {
+    public String getTaskName() {
         return taskName;
     }
     public void setTaskName(String taskName) {

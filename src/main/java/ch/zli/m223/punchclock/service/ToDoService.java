@@ -14,23 +14,18 @@ public class ToDoService {
     @Inject
     private EntityManager toDoManager;
 
-    @Transactional
-    public ToDo createToDo(ToDo toDo) {
-        toDoManager.persist(toDo);
-        return toDo;
-    }
-
-    public List<ToDo> findAll() {
-        var query = toDoManager.createQuery("FROM ToDo");
-        return query.getResultList();
-    }
-
     public ToDo getToDoById(Long id) {
         return toDoManager.find(ToDo.class, id);
     }
 
     @Transactional
-    public void delete(Long id) {
+    public ToDo addToDo(ToDo toDo) {
+        toDoManager.persist(toDo);
+        return toDo;
+    }
+
+    @Transactional
+    public void deleteToDo(Long id) {
         ToDo task = getToDoById(id);
         toDoManager.remove(task);
     }
@@ -40,4 +35,10 @@ public class ToDoService {
         toDoManager.merge(toDo);
         return toDo;
     }
+
+    public List<ToDo> getAllToDos() {
+        var query = toDoManager.createQuery("FROM ToDo");
+        return query.getResultList();
+    }
+
 }

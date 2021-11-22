@@ -1,9 +1,9 @@
 <template>
 <q-page class="flex flex-center">
 <h2>Übersicht</h2>
-    <div class="dashboard">
-        <q-table title="" :rows="rows" :columns="columns" row-key="name" />
-    </div>
+<div class="q-pa-md">
+    <q-table :rows="rows" :columns="columns" row-key="dashboard" />
+</div>
 </q-page>
 </template>
 
@@ -14,12 +14,13 @@ const columns = [
             name: 'username',
             todo: 'todo',
             label: 'Name',
-            field: 'name',
+            field: 'dashboard',
         },
+
         { name: 'todo', label: 'ToDo', field: 'todo'},
         { name: 'task', label: 'Task', field: 'task'},
-        { name: 'checkIn', label: 'Start date', field: 'checkIn'},
-        { name: 'checkOut', label: 'End date', field: 'checkOut' },
+        { name: 'checkIn', label: 'Start', field: 'checkIn'},
+        { name: 'checkOut', label: 'End', field: 'checkOut' },
         { name: 'edit', label: 'Edit', field: 'edit' },
         { name: 'delete', label: 'Delete', field: 'delete' }
     ]

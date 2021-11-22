@@ -13,7 +13,7 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Punch Clock App
         </q-toolbar-title>
         <div v-if="$store.getters['auth/authorized']">
           <q-btn flat label="logout" no-caps @click="logout"></q-btn>
@@ -54,7 +54,7 @@ const linksList = [
   {
     title: 'Users',
     icon: 'home',
-    link: 'https://quasar.dev'
+    link: '/users'
   },
   {
     title: 'Dashboard',
